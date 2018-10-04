@@ -8,13 +8,16 @@
 <html lang="en">
 <head>
   <title>TinyApp</title>
+  <header>
+    <% include ./partials/_headers %>
+</header>
 </head>
 <body>
-
-  <!-- <ol>
-    <% for(var k in urls) { %>
-        <li><%= k %> : <%= urls[k] %> </li>
-    <% } %>
-    </ol> -->
+  <form method="POST" action="<%= '/urls/' + shortURL %>" >
+   <label for="newURL">Enter a URL:</label>
+      <input id="newURL" type="text" name="newURL"
+      placeholder="http://" style="width: 300px"> <!-- "id" is the value that obtains "Input", and we declear it as  the "newURL" -->
+      <input type="submit" value="Update">  <!--  put the Button of "sbumit", which is the type "submit"  -->
+        </form>
 </body>
 </html>

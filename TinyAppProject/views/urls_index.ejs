@@ -2,11 +2,20 @@
 <html lang="en">
 <head>
   <title>TinyApp</title>
+  <header>
+    <% include ./partials/_headers %>
+</header>
 </head>
 <body>
+
   <ol>
     <% for(var k in urls) { %>
         <li><%= k %> : <%= urls[k] %> </li>
+        <form method="POST" action="<%= '/urls/' + k + '/delete' %>" > <!--  point to the correct address by: <form method="" action="the address" -->
+          <a href="/urls/<%= k%>"> Edit</a><!-- add the anchor tag -->
+          <input type="submit" value="Delete"> <!--  put the sbumit  -->
+        </form>
+
     <% } %>
     </ol>
 </body>

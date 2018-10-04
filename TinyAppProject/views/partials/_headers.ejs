@@ -1,20 +1,21 @@
-<!-- views/partials/header.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TinyApp</title>
+</head>
+<body>
+  <% console.log(userName) %>
+  <% if(!userName){ %>
+    <form method="POST" action="/login">
+      <label>Username</label>
+      <input type="input" name="usernameField"  pattern="[A-Za-z\s]+"maxlength="100" minlength="0">
+      <input type="submit" value="Login In"> %>
+    </form>
+  <% } else { %>
+    <form method="POST" action="/logout">
+      <input type="submit" value="Logout">
+    </form>
+  <% } %> <!--set two <form> in different conditions> -->
 
-<nav class="navbar navbar-default" role="navigation">
-<div class="container-fluid">
-
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">
-            <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
-            EJS Is Fun
-            CODING
-        </a>
-
-        <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
-    </div>
-
-</div>
-</nav>
+</body>
+</html>
