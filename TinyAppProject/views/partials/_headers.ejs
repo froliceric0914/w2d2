@@ -4,18 +4,21 @@
   <title>TinyApp</title>
 </head>
 <body>
-  <% console.log(userName) %>
-  <% if(!userName){ %>
+  <span>Register Here: </span><a href="http://localhost:8080/register">http://localhost:8080/register</a> <br>
+ <span>Login Here: </span> <a href="http://localhost:8080/login">http://localhost:8080/login</a>  <%= userName.email %>
+    <form method="POST" action="/logout">
+      <input type="submit" value="Logout">
+    </form>
+
+<!--   <% if(!userName){ %>
     <form method="POST" action="/login">
       <label>Username</label>
       <input type="input" name="usernameField"  pattern="[A-Za-z\s]+"maxlength="100" minlength="0">
       <input type="submit" value="Login In"> %>
-    </form>
-  <% } else { %>
-    <form method="POST" action="/logout">
-      <input type="submit" value="Logout">
-    </form>
-  <% } %> <!--set two <form> in different conditions> -->
+    </form> -->
+<!--  <% } else { %> --> -->
+
+  <% } %> <!--set two <form> in different conditions>
 
 </body>
 </html>

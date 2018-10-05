@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TinyApp</title>
+</head>
+<body>
+  <% if(!userName){ %>
+    <form method="POST" action="/login">
+      <label>Username</label>
+      <input type="input" name="usernameField"  pattern="[A-Za-z\s]+"maxlength="100" minlength="0">
+      <span>Password</span><input type="password" name="password"> <br>
+      <input type="submit" value="Login In"> %>
+    </form>
+  <% } else { %>
+    <%= userName.email %>
+    <form method="POST" action="/logout">
+      <input type="submit" value="Logout">
+    </form>
+  <% } %> <!--set two <form> in different conditions> -->
+
